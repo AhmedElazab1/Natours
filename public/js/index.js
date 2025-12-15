@@ -41,7 +41,6 @@ if (userDataForm)
     form.append('name', document.getElementById('name').value);
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').files[0]);
-    console.log(form);
 
     updateSettings(form, 'data');
   });
@@ -70,6 +69,5 @@ if (bookBtn)
   bookBtn.addEventListener('click', (e) => {
     e.currentTarget.textContent = 'Processing...';
     const { tourId } = e.currentTarget.dataset;
-    console.log(tourId);
     bookTour(tourId);
   });
